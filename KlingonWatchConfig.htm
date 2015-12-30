@@ -3,23 +3,61 @@
 
 <head>
 <title></title>
-<link rel='stylesheet' type='text/css' href="slate/dist/css/slate.css"/>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+
+
 </head>
+
+
 <body>
 <form id="KlingonConfig">
-<div class="item-container-content">
-       
-Languaje
-    
-    <select id="Select1" name="D1">
-                        <option value="ca">Català</option>
-                        <option value="es">Spanish</option>
-                        <option value="en">English</option>
-                        <option value="fr">Francaise</option>
-                    </select>
-    
-    <input id="Submit1" type="submit" value="submit" class="item-button item-input-button" /></div>
 
+<div data-role="page" id="main">
+    <div data-role="fieldcontain">
+        <label class="item">Languaje</label>
+
+        <select id="Select1"name="D1">
+            <option value="ca">Català</option>
+                <option value="es">Spanish</option>
+                <option value="en" selected>English</option>
+                <option value="fr">Francaise</option>
+        </select>
+    </div>
+
+    <div data-role="fieldcontain">
+        <label class="item">Federation Time</label>
+    
+        <select name="FederationTime" id="FederationTime" data-role="slider">
+            <option value="0">Off</option>
+            <option value="1" selected>On</option>
+        </select>
+    </div>   
+                
+    <div data-role="fieldcontain">
+        <label class="item">Klingon Time</label>
+             
+        <select name="KlingonTime" id="KlingonTime" data-role="slider">
+            <option value="0">Off</option>
+            <option value="1" selected>On</option>
+        </select>
+    
+    </div>
+
+    <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <div class="ui-block-a"><button type="submit" id="b-cancel" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-delete">Cancel</button></div>
+                <div class="ui-block-b"><button type="submit" id="b-submit" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-check ui-btn-active ui-state-persist">Submit</button></div>
+            </ul>
+        </div>
+        <h4 style="display:none;">Footer</h4>
+    </div>
+
+</div>
+
+     
 </form>
 <script type="text/javascript" src="slate/dist/js/slate.js"></script>
 </body>
