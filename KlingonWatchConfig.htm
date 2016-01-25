@@ -98,11 +98,11 @@
 
           // Set the return URL depending on the runtime environment
           var return_to = getQueryParam('return_to', 'pebblejs://close#');
-        //  document.location = return_to + encodeURIComponent(JSON.stringify(getConfigData()));
+          document.location = return_to + encodeURIComponent(JSON.stringify(getConfigData()));
       });
 
       var cancelButton = document.getElementById('b_cancel');
-      submitButton.addEventListener('click', function () {
+      cancelButton.addEventListener('click', function () {
           console.log('Cancel');
 
           // Set the return URL depending on the runtime environment
